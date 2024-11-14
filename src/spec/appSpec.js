@@ -41,5 +41,5 @@ describe("Berlin Clock tests", function() {
 
       expect(cinqHeure(20)).toBe('1111');
       expect(cinqHeure(24)).toBe('1111');
-    }
+    });
 }); 
