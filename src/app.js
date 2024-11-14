@@ -8,11 +8,7 @@ class Main {
         const lamps = ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
         const lampsOn = Math.floor(minutes/5);
         for (let i=0; i < lampsOn; i++) {
-            if ((i+1) % 3 === 0 && i !== 0) {
-                lamps[i] = 'R';
-            } else {
-                lamps[i] = 'Y';
-            }
+            lamps[i] = (i+1) % 3 === 0 ? 'R' : 'Y';
         }
         return lamps.join(' ');
     }
