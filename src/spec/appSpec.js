@@ -1,3 +1,4 @@
+import { it } from "vitest";
 import { Main } from "../app";
 
 describe("Berlin Clock tests", function() {
@@ -24,4 +25,21 @@ describe("Berlin Clock tests", function() {
       expect(simpleHeure(3)).toBe('1110');
       expect(simpleHeure(4)).toBe('1111');
     });
+
+    it('lights for each 5 hours block', () => {
+      expect(cinqHeure(0)).toBe('0000');
+      expect(cinqHeure(4)).toBe('0000');
+
+      expect(cinqHeure(5)).toBe('1000');
+      expect(cinqHeure(9)).toBe('1000');
+
+      expect(cinqHeure(10)).toBe('1100');
+      expect(cinqHeure(14)).toBe('1100');
+
+      expect(cinqHeure(15)).toBe('1110');
+      expect(cinqHeure(19)).toBe('1110');
+
+      expect(cinqHeure(20)).toBe('1111');
+      expect(cinqHeure(24)).toBe('1111');
+    }
 }); 

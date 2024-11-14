@@ -17,16 +17,12 @@
 
 
 
- heureSimple(hours) {
-    let ampoules = '0000';
-
-    for (let i = 0; i < hours; i++) {
-        ampoules = ampoules.substr(0, i) + '1' + ampoules.substr(i + 1); // Remplacer '0' par '1' pour chaque heure
-    }
-  
-    return ampoules;
-}
-  
+heureSimple(hours){
+    return '1'.repeat(hours) + '0'.repeat(4 - hours);
 }
 
-module.exports ={Main, simpleHeure};
+
+
+}
+module.exports = { heureSimple };
+module.exports ={Main};
