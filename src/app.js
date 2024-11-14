@@ -26,6 +26,17 @@ class Main {
         const lampsOn = Math.floor(hours/5);
         return ['O','O','O','O'].map((lamp, index) => (index < lampsOn ? 'R' : lamp)).join(' ');
     }
+
+    berlinClock(time) {
+        const [hours, minutes] = time.split(':').map(Number);
+
+        return [
+            this.fiveHoursBlocks(hours),
+            this.simpleHours(hours),
+            this.fiveMinutesBlocks(minutes),
+            this.simpleMinutes(minutes)
+        ].join('\n');
+    }
 }
 
 module.exports = { Main };

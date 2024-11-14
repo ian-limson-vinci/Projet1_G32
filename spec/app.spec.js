@@ -26,4 +26,12 @@ describe("Berlin Clock tests", function() {
 
         expect(result).toBe("R R R O");
     })
+
+    it("Should return full Berlin clock", function() {
+        let result = main.berlinClock("13:17");
+
+        expect(result).toBe(
+            "R R O O\nR R R O\nY Y R O O O O O O O O\nY Y O O"
+        )
+    })
 }); 
