@@ -27,16 +27,23 @@ class Main {
         return ['O','O','O','O'].map((lamp, index) => (index < lampsOn ? 'R' : lamp)).join(' ');
     }
 
+    secondsLamp(seconds) {
+        return seconds % 2 === 0 ? 'R' : 'O';
+    }
+
     berlinClock(time) {
-        const [hours, minutes] = time.split(':').map(Number);
+        const [hours, minutes, seconds] = time.split(':').map(Number);
 
         return [
+            this.secondsLamp(seconds),
             this.fiveHoursBlocks(hours),
             this.simpleHours(hours),
             this.fiveMinutesBlocks(minutes),
             this.simpleMinutes(minutes)
         ].join('\n');
     }
+
+     
 }
 
 module.exports = { Main };
