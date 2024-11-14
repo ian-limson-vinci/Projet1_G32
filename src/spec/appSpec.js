@@ -16,8 +16,8 @@ describe("Berlin Clock tests", function() {
 
 
 
-    
-    it('should turn on the correct number of lamps for hours', () => {
+
+    it('lights for the hours', () => {
       expect(simpleHeure(0)).toBe('0000');
       expect(simpleHeure(1)).toBe('1000');
       expect(simpleHeure(2)).toBe('1100');
