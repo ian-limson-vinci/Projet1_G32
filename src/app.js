@@ -1,7 +1,7 @@
 
 class Main {
     simpleMinutes(minutes) {
-        const lampsOn = minutes % 4;
+        const lampsOn = minutes % 5;
         return ['O','O','O','O'].map((lamp, index) => (index < lampsOn ? 'Y' : lamp)).join(' ');
     }
 
@@ -16,15 +16,16 @@ class Main {
         return lamps.join(' ');
     }
 
-    heureSimple(hours){
-        return '1'.repeat(hours) + '0'.repeat(4 - hours);
+    simpleHours(hours){
+        const lampsOn = hours % 5;
+        return ['O','O','O','O'].map((lamp, index) => (index < lampsOn ? 'R' : lamp)).join(' ');
+
     }
     
-    cinqHeure(hours) {
-        return '1'.repeat(Math.floor(hours / 5)) + '0'.repeat(4 - Math.floor(hours / 5));
-      }
+    fiveHoursBlocks(hours) {
+        const lampsOn = Math.floor(hours/5);
+        return ['O','O','O','O'].map((lamp, index) => (index < lampsOn ? 'R' : lamp)).join(' ');
+    }
 }
 
 module.exports = { Main };
-module.exports = { cinqHeure };
-module.exports = { heureSimple };
