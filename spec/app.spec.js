@@ -22,4 +22,10 @@ describe("Berlin Clock tests", function() {
         expect(resultEven).toBe("Y");
         expect(resultOdd).toBe("O");
     });
+
+    it("Should return the complete Berlin Clock representation", function() {
+        let result = main.berlinClock(12, 23, 2);
+        
+        expect(result).toBe("Y\nR R O O\nR R O O\nY Y R Y O O O O O O O\nY Y Y O");
+    });
 }); 

@@ -27,6 +27,16 @@ class Main {
       secondsLamp(seconds) {
         return seconds % 2 === 0 ? 'Y' : 'O';
     }
+
+    berlinClock(hours, minutes, seconds) {
+        return [
+            this.secondsLamp(seconds),
+            this.cinqHeure(hours),
+            this.heureSimple(hours),
+            this.fiveMinutesBlocks(minutes),
+            this.simpleMinutes(minutes)
+        ].join('\n');
+    }
 }
 
 module.exports = { Main };
