@@ -23,6 +23,10 @@ class Main {
     cinqHeure(hours) {
         return '1'.repeat(Math.floor(hours / 5)) + '0'.repeat(4 - Math.floor(hours / 5));
       }
+
+      secondsLamp(seconds) {
+        return seconds % 2 === 0 ? 'Y' : 'O';
+    }
 }
 
 module.exports = { Main };

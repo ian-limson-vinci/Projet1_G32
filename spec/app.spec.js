@@ -14,4 +14,12 @@ describe("Berlin Clock tests", function() {
 
         expect(result).toBe("Y Y R Y O O O O O O O");
     })
+    
+    it("Should return correct seconds lamp", function() {
+        let resultEven = main.secondsLamp(2);
+        let resultOdd = main.secondsLamp(3);
+        
+        expect(resultEven).toBe("Y");
+        expect(resultOdd).toBe("O");
+    });
 }); 
